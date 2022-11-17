@@ -40,7 +40,7 @@ module.exports = {
   },
   plugins: [
     new CaseSensitivePathsPlugin(),
-    new DotEnv({ path: path.join(__dirname, "/.env"), systemvars: true }),
+    new DotEnv({ systemvars: true }),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "/dist/index.html"),
     }),
