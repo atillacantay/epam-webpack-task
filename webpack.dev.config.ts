@@ -44,9 +44,12 @@ module.exports = {
   },
   plugins: [
     new CaseSensitivePathsPlugin(),
-    new DotEnv({ path: "./.env.development", systemvars: true }),
+    new DotEnv({
+      path: path.join(__dirname, "/.env.development"),
+      systemvars: true,
+    }),
     new HtmlWebpackPlugin({
-      template: "./dist/index.html",
+      template: path.join(__dirname, "/dist/index.html"),
     }),
   ],
   optimization: {
